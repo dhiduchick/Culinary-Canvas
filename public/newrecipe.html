@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/newRecipe.css">
+    <title>New Recipe Form</title>
+</head>
+<body>
+
+<form id="recipeForm" enctype="multipart/form-data" action="./" method="post">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" required>
+
+    <label for="ingredients">Ingredients:</label>
+    <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+
+    <label for="steps">Steps to Complete the Recipe:</label>
+    <textarea id="steps" name="steps" rows="6" required></textarea>
+
+    <label for="image">Upload Image:</label>
+    <input type="file" id="image" name="image" accept="image/*">
+
+    <button type="button" onclick="submitForm()">Submit Recipe</button>
+</form>
+
+<script src="./js/newRecipe.js"></script>
+
+</body>
+</html>
