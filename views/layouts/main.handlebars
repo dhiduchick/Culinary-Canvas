@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header id="header" class="container-fluid row">
+    <h1 class="col-6">Culinary Canvas</h1>
+    <nav id="nav" class="col">
+        <a href="/">Home</a>
+        {{#if loggedIn}}
+            <button id="logout">Logout</button>
+            <button id="profile">Profile</button>
+        {{else}}
+            <a href="login">Login</a>
+        {{/if}}
+  </nav>
+  </header>
+  <main>
+    <div>
+      {{{body}}}
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Canvas- Update Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <main>
+        <section id="profile_constainer" class="constainer ml-3 ">
+            <h2 id="profile_container" class="row"></h2>Modify your Profile</h2>
+            <div class="row justify-constent-center">
+                <form action="/upload" method="POST" enctype="multipart/form-data" class="col">
+
+                    <div class= "col-6 m-3">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="Last_name" name="Last_name" required>
+                    </div>
+
+                    <div class= "col-6  m-3">
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday" required>
+                    </div>
+
+                    <div class= "col-6  m-3">
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="bio"></textarea>
+                    </div>
+
+                    <div class= "col-6  m-3">
+                        <label for="profile_picture">Upload a Profile Picture:</label>
+                        <input type="file" name="profile_picture" />
+                        <button type="submit">Upload</button>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Save">
+                </form>
+        </section>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script scr="../../views/layours/main.hadlebars"></script>
+    <script src="js/profile.js"></script>
+</body>
