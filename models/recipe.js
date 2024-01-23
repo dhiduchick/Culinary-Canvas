@@ -24,7 +24,7 @@ recipe.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        steps:
+        directions:
         {
             type: DataTypes.STRING,
             allowNull:false
