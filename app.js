@@ -17,9 +17,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Configure Cloudinary
 cloudinary.config({
-    cloud_name: 'dwqsanfkj',
-    api_key: '456521387282719',
-    api_secret: 'oT-Ks7m6_gCMoY3kek8I171diy8'
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET
 });
 
 // Configure multer with Cloudinary storage
