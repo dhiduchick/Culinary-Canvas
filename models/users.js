@@ -33,7 +33,7 @@ users.init(
             },
         },
         email: {
-            type: DaataTypes.STRING,
+            type: DataTypes.STRING,
             allowNull: true,
             unique: true,
             validate: {
