@@ -1,0 +1,39 @@
+
+.jumbotron {
+    background: white
+    color: black; 
+    padding: 20px;
+    
+ 
+
+}
+  
+    
+
+
+
+    .top-right-buttons {
+position: absolute;
+top: 20px;
+right: 20px;
+
+}
+  
+
+  body {
+    background-color: #90ee90 
+  }
+
+
+
+  .culinary-image {
+      width: 75px; 
+   
+  margin-right: 10px; 
+  }
+  .search-bar {
+      margin-top: 20px;
+      margin-left: 500px;
+      text-align: center; 
+  }
+
