@@ -36,8 +36,8 @@ recipe.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'profile',
+        modelName: 'recipe',
     }
 )
 
-module.exports = Profile;
+module.exports =recipe;
