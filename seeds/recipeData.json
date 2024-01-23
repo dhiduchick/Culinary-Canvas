@@ -1,0 +1,53 @@
+[
+    {
+        "title": "Chocolate Chip Cookies",
+        "author": "Violet Sorrengail",
+        "ingredients": [
+            "1/2 cup butter",
+            "1/2 cup granulated sugar",
+            "1/4 cup brown sugar (packed)",
+            "2 teaspoons vanilla extract",
+            "1 large egg",
+            "1 3/4 cups all-purpose flour",
+            "1/2 teaspoon baking soda",
+            "1/2 teaspoon kosher salt",
+            "1 cup semisweet chocolate chips"
+        ],
+        "directions": [
+            "1. preheat oven to 350 F.",
+            "2. Microwave the butter for about 40 seconds. Butter should be completely melted but shouldn't be hot.",
+            "3. In a large bowl, mix butter with the sugars until well-combined.",
+            "4. Stir in vanilla and egg until incorporated.",
+            "5. Add the flour, baking soda, and salt. Please read the recipe note about properly measuring flour.",
+            "6. Mix dough until just combined. Dough should be soft and a little sticky but not overly sticky.",
+            "7. Stir in chocolate chips.",
+            "8. Scoop out 1.5 tablespoons of dough (medium cookie scoop) and place 2 inches apart on baking sheet.",
+            "9. Bake for 7-10 minutes, or until cookies are set. They will be puffy and still look a little underbaked in the middle."
+        ]
+    },
+
+    {
+        "title": "Spaghetti Bolognese",
+        "author": "Chef John",
+        "ingredients": [
+          "400g ground beef",
+          "1. onion, chopped",
+          "2. cloves garlic, minced",
+          "1. can (400g) crushed tomatoes",
+          "2. tablespoons tomato paste",
+          "1. teaspoon dried oregano",
+          "1. teaspoon dried basil",
+          "Salt and pepper to taste",
+          "300g spaghetti"
+        ],
+        "directions": [
+          "In a large pan, brown the ground beef over medium heat.",
+          "Add chopped onions and minced garlic, and cook until onions are softened.",
+          "Stir in crushed tomatoes, tomato paste, oregano, basil, salt, and pepper.",
+          "Simmer for 20-30 minutes, stirring occasionally.",
+          "Cook spaghetti according to package instructions.",
+          "Serve the Bolognese sauce over cooked spaghetti."
+        ]
+      }
+]    
+
