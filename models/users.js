@@ -40,15 +40,18 @@ users.init(
                 isEmail: true,
             },
         },
+
+
+    },
+    {
         hooks: {
             beforeCreate: async (newUser) => {
                 newUser.password = await bcrypt.hash(newUser.password, 12);
                 return newUser;
             },
             beforeUpdate: async (updateUser) => {
-                updateUser.password = await bcrypt.hash(updatedUser.password, 12);
+                updateUser.password = await bcrypt.hash(updateUser.password, 12);
             },
-
         },
 
         sequelize,
