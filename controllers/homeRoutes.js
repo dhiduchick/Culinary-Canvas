@@ -65,27 +65,27 @@
 const router = require('express').Router();
 const { users, post, image, recipe } = require('../models');
 
-router.get('/login', (req, res) => {
+router.get('/signin', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');
         return;
     }
-    res.render('login');
+    res.render('signin');
 });
 
-router.get('/signup', (req, res) => {
-    if (req.session.logged_in) {
-        res.redirect('/');
-        return;
-    }
-    res.render('signup');
-});
+// router.get('/signup', (req, res) => {
+//     if (req.session.logged_in) {
+//         res.redirect('/');
+//         return;
+//     }
+//     res.render('signup');
+// });
 
-router.get('/create', (req, res) => {
+router.get('/newrecipe', (req, res) => {
     console.log(req.session.user_id)
     try {
         const loggedIn = req.session.logged_in;
-        res.render('createRecipe', {
+        res.render('newrecipe', {
             loggedIn,
         });
     } catch (err) {
