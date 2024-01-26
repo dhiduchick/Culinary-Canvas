@@ -27,19 +27,6 @@ Recipe.init(
       type: DataTypes.STRING(10000),
       allowNull: false,
     },
-    // // New field for image URL
-    // image_url: {
-    //   type: DataTypes.STRING,
-    //   allowNull: true, // Modify based on your requirements
-    // },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'users',
-        key: 'id',
-      },
-    },
-  },
 
   {
     sequelize,
