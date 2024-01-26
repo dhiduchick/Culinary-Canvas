@@ -23,13 +23,14 @@
         "express": "^4.17.1",
         "express-handlebars": "^5.2.0",
         "express-session": "^1.17.1",
+        "handlebars": "^4.7.8",
         "mysql2": "^2.2.5",
         "sequelize": "^6.3.5"
-      },
-      "devDependencies": {
+    },
+    "devDependencies": {
+        "@types/express-handlebars": "^6.0.0",
         "eslint": "^7.12.1",
         "eslint-config-prettier": "^6.15.0",
         "prettier": "^2.1.2"
-      }
     }
- 
+}
