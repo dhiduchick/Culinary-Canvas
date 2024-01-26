@@ -1,30 +1,13 @@
-const post = require('./post');
-const recipe = require ('./recipe');
-const users = require ('./users');
-const image = require ('./image');
+const User = require('./User');
+const Recipe = require('./Recipe');
 
-users.hasMany(post, {
-    foreignKey: 'user_id'
+User.hasMany(Recipe, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
-users.hasMany(recipe, {
-    foreignKey: 'user_id'
+Recipe.belongsTo(User, {
+  foreignKey: 'user_id'
 });
 
-recipe.hasOne(image, {
-    foreignKey: 'user_id'
-});
-
-recipe.belongsTo(users, {
-    foreignKey: 'user_id'
-});
-
-post.belongsTo(users, {
-    foreignKey: 'user_id'
-});
-
-image.belongsTo(recipe, {
-    foreignKey: 'user_id'
-});
-
-module.exports={ image, post, recipe, users};
+module.exports = { User, Recipe };

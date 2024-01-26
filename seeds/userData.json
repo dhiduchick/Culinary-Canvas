@@ -1,12 +1,17 @@
 [
     {
-        "username": "cholmes",
-        "email": "cholmes@gmail.com",
-        "password": "FourthWing123!"
+      "name": "Sal",
+      "email": "sal@hotmail.com",
+      "password": "password12345"
     },
     {
-        "username": "ctanck",
-        "email": "ctanck@verizon.net",
-        "password": "BruinsGRL1924"
+      "name": "Lernantino",
+      "email": "lernantino@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Amiko",
+      "email": "amiko2k20@aol.com",
+      "password": "password12345"
     }
-]
+  ]
