@@ -24,7 +24,7 @@ Recipe.init(
       allowNull: false,
     },
     directions: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(10000),
       allowNull: false,
     },
     // New field for image URL
