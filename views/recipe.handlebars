@@ -1,40 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{recipe.title}}</title>
-</head>
-<body>
-
-<header>
-    <h1>{{recipe.title}}</h1>
-    <p>By: {{recipe.author}}</p>
-</header>
-
-<main>
-    {{#if recipe.image}}
-        <img src="{{recipe.image}}" alt="{{recipe.title}}">
-    {{/if}}
-
-    <section>
-        <h2>Ingredients</h2>
-        <ul>
-            {{#each recipe.ingredients}}
-                <li>{{this}}</li>
-            {{/each}}
-        </ul>
-    </section>
-
-    <section>
-        <h2>Directions</h2>
-        <ol>
-            {{#each recipe.directions}}
-                <li>{{this}}</li>
-            {{/each}}
-        </ol>
-    </section>
-</main>
-
-</body>
-</html>
+<div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{{get_emoji}}}</p>
+  <p>{{description}}</p>
+  <p>Created by {{recipe-author}}</p>
+  <p>
+    <button class="btn btn-primary">Look at this Recipe!</button>
+  </p>
+</div>
