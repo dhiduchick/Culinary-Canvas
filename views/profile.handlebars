@@ -1,40 +1,48 @@
+<!-- Row for displaying user's welcome message -->
 <div class="row">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
-
+<!-- Row for submitting a new recipe -->
 <div class="row mt-4">
   <div class="col-md-6">
     <h3>Submit a New Recipe:</h3>
-
+<!-- Form for submitting a new recipe -->
     <form class="form new-recipe-form">
+      <!-- Recipe Title Input -->
       <div class="form-group">
         <label for="recipe-title">Recipe Title:</label>
         <input class="form-input" type="text" id="recipe-title" name="recipe-title" />
       </div>
+      <!-- Author Input -->
       <div class="form-group">
         <label for="recipe-author">Author:</label>
         <input class="form-input" type="text" id="recipe-author" name="recipe-author" />
       </div>
+       <!-- Ingredients Textarea -->
       <div class="form-group">
         <label for="recipe-ingredients">Ingredients:</label>
         <textarea class="form-input" id="recipe-ingredients" name="recipe-ingredients"></textarea>
       </div>
+       <!-- Directions Textarea -->
       <div class="form-group">
         <label for="recipe-directions">Directions:</label>
         <textarea class="form-input" id="recipe-directions" name="recipe-directions"></textarea>
       </div>
+      <!-- Create Button -->
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
   </div>
 
+ <!-- Display submitted recipes if there are any -->
   {{#if recipes.length}}
   <div class="col-md-6 project-list">
     <h3>Submitted Recipes:</h3>
 
+<!-- Loop over each recipe and display its title and delete button -->
     {{#each recipes as |recipe|}}
     <div class="row mb-2">
       <div class="col-md-8">
@@ -49,4 +57,5 @@
   {{/if}}
 </div>
 
+<!-- Include JavaScript file for profile functionality -->
 <script src="./js/profile.js"></script>

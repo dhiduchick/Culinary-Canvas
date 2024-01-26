@@ -5,19 +5,23 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
+      <!-- Create a link to the recipe details page -->
       <a href="/recipe/{{recipe.id}}">{{recipe.title}}</a>
     </h2>
     <p>
+       <!-- Placeholder span for an image with an aria-label for accessibility -->
       <span for="img" aria-label="money"></span>
-      <!-- Pass needed_funding value to the helper function -->
+      <!-- Display the author of the recipe -->
       <span class="authors">{{recipe.author}}</span>
     </p>
   </div>
   <div class="col-md-7">
     <p>
+      <!-- Display the ingredients of the recipe -->
       {{recipe.ingredients}}
     </p>
     <p>
+       <!-- Display the directions of the recipe -->
       {{recipe.directions}}
     </p>
   </div>

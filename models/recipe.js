@@ -27,7 +27,7 @@ Recipe.init(
       type: DataTypes.STRING(10000),
       allowNull: false,
     },
-
+  },
   {
     sequelize,
     timestamps: false,

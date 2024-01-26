@@ -2,41 +2,52 @@
 <html lang="en">
 
 <head>
+  <!-- Set character set and viewport for responsive design -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lets Get Cooking!</title>
+  <!-- Set the title of the page -->
+  <title>Culinary Canvas!</title>
+  <!-- Include stylesheets for styling -->
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+  <!-- Create a flex container with a column layout and justify-content space-around -->
   <div class="flex-column justify-space-around">
+     <!-- Header section with a flex layout, space-between, and alignment center -->
     <header class="display-flex justify-space-between align-center p-2">
+       <!-- Site logo with a link to the home page -->
       <h1>
         <span role="img" aria-label="egg">🍳</span>
         <a href="/">Culinary Canvas</a>
       </h1>
+            <!-- Navigation section with conditional rendering for login/logout links -->
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
+         <!-- Display profile link and logout button if user is logged in -->
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
+           <!-- Display login link if user is not logged in -->
         <a href="/login">login</a>
         {{/if}}
       </nav>
     </header>
+     <!-- Main content area with a container class and fluid design -->
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      
+      <p>Life doesn't get feta than this. Made with ♡ by: Daelyn Hiduchick, Joey Raymond, and Sawyer Baldwin </p>
     </footer>
   </div>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
+  <!-- Include JavaScript file for logout functionality -->
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
