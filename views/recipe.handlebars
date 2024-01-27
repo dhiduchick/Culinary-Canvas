@@ -1,9 +1,16 @@
+<!-- Centered content for displaying recipe details -->
 <div class="text-center">
-  <h2>{{recipe.title}}</h2>
+  <!-- Recipe Title -->
+  <h2>{{title}}</h2>
+    <!-- Render emoji using the get_emoji helper function -->
   <p>{{{get_emoji}}}</p>
-  <p>Created by {{recipe.author}}</p>
-  <p>Ingredients: {{recipe.ingredients}}</p>
-  <p>Directions: {{recipe.directions}}</p>
+  <!-- Display the author of the recipe -->
+  <p>Created by {{author}}</p>
+   <!-- Display the ingredients of the recipe -->
+  <p>Ingredients: {{ingredients}}</p>
+  <!-- Display the directions of the recipe -->
+  <p>Directions: {{directions}}</p>
+  <!-- Button for sending love to the recipe -->
   <p>
     <button class="btn btn-primary">❤️‍🔥 Send Love ❤️‍🔥</button>
   </p>
