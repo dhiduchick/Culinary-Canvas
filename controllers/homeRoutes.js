@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Recipe, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+//This grabs all the recipes
 router.get('/', async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({
@@ -14,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-
+    //This renders the recipes on the homepage
     res.render('homepage', { 
       recipes, 
       logged_in: req.session.logged_in 
@@ -46,6 +47,7 @@ router.get('/recipe/:id', async (req, res) => {
   }
 });
 
+//This allows you to see an individual profile with their specific recipes
 router.get('/profile', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -64,6 +66,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+//this redirects the user to the profile page on login
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/profile');

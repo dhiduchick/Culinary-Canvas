@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Recipe } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//This defines the route where a recipe is created
 router.post('/', withAuth, async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
@@ -15,6 +16,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+//This designates the deleted route
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({

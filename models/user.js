@@ -7,7 +7,7 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+//This sets up the data table associated with the user
 User.init(
   {
     id: {
@@ -37,6 +37,7 @@ User.init(
     },
   },
   {
+    //These hooks designate a hashing to be done on the password before it is created or updated
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);

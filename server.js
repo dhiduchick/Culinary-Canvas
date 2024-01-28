@@ -5,6 +5,8 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const passport = require('passport');
+const authRouter = require('./controllers/api/auth.js');
 
 const sequelize = require('./config/connection');
 const { strict } = require('assert');
@@ -35,6 +37,11 @@ const sess = {
 };
 //Use the configured session middleware 
 app.use(session(sess));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use('/', authRouter);
 
 // Inform Express.js which template engine we're using
 app.engine('handlebars', hbs.engine);

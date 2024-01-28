@@ -1,6 +1,8 @@
+//requireing sequelize functionality and dotenv configuration
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
+//Determining where to listen-URL or local
 let sequelize;
 
 if(process.env.CULINARYDB_URL) {

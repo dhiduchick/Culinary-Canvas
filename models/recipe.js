@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Recipe extends Model { }
-
+//This sets up the sata table associated with Recipes
 Recipe.init(
   {
     id: {
