@@ -1,4 +1,4 @@
-const User = require('./User');
+const User = require('./user');
 const Recipe = require('./Recipe');
 
 //Defines taht a user will have many recipes
