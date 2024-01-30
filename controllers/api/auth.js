@@ -3,6 +3,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oidc');
 const db = require('../../models/db');
 
+
 //Sets up and uses passport for a new google Strategy authentication
 passport.use(new GoogleStrategy({
     clientID: process.env['GOOGLE_CLIENT_ID'],
@@ -63,7 +64,7 @@ passport.use(new GoogleStrategy({
 
   //Creates the login route for auth
 router.get('/login', function(req, res, next) {
-  res.render('login');
+  res.render('profile');
 });
 
 //Creates route to google
