@@ -63,8 +63,7 @@ passport.use(new GoogleStrategy({
 
   //Creates the login route for auth
 router.get('/login', function(req, res, next) {
-  res.render('profile');
-
+  res.render('login');
 });
 
 //Creates route to google
