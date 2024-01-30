@@ -22,7 +22,9 @@ passport.use(new GoogleStrategy({
         ], function(err) {
           if (err) { return cb(err); }
   
+
           let id = this.lastID;
+
           db.run('INSERT INTO federated_credentials (user_id, provider, subject) VALUES (?, ?, ?)', [
             id,
             issuer,
@@ -30,6 +32,7 @@ passport.use(new GoogleStrategy({
           ], function(err) {
             if (err) { return cb(err); }
             let user = {
+
               id: id,
               name: profile.displayName
             };
@@ -74,6 +77,7 @@ router.get('/oauth2/redirect/google', passport.authenticate('google', {
     successRedirect: '/',
     failureRedirect: '/login'
   }));
+
 
   //Forms logout route
   router.post('/logout', function(req, res, next) {

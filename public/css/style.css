@@ -1,5 +1,5 @@
 header, .project:not(:last-child) {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #a8cdb6;
   }
   
   .no-button {
@@ -7,13 +7,13 @@ header, .project:not(:last-child) {
     border: none;
     padding: 0;
     cursor: pointer;
-    color: #1b89bc;
+    color: #568956;
     text-decoration: none;
     font-size: 100%;
   }
   
   .no-button:hover {
-    color: #065b83;
+    color: #068329;
     text-decoration: underline;
   }
   

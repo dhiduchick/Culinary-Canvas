@@ -1,5 +1,5 @@
-const User = require('./User');
-const Recipe = require('./Recipe');
+const User = require('./user');
+const Recipe = require('./recipe');
 
 //Defines taht a user will have many recipes
 User.hasMany(Recipe, {
