@@ -71,8 +71,10 @@ router.get('/login/federated/google', passport.authenticate('google'));
 
 //Creates Oauth route to redirect for authentication
 router.get('/oauth2/redirect/google', passport.authenticate('google', {
+
     successRedirect: '/login',
     failureRedirect: '/'
+
   }));
 
   //Forms logout route
