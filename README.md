@@ -14,6 +14,8 @@ Culinary Canvas is an immersive and interactive web application designed to cate
 
 - Invoke app with npm start
 
+## Live Link
+https://evening-reef-48573-57db96f3f837.herokuapp.com/ 
 ## Installation
 
 1. Clone the repo
