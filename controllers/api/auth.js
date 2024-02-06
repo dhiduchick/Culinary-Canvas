@@ -1,5 +1,6 @@
 const router = require('express').Router();
 
+
   //Creates the login route for auth
 router.get('/login', function(req, res, next) {
   res.render('login');

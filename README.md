@@ -14,6 +14,8 @@ Culinary Canvas is an immersive and interactive web application designed to cate
 
 - Invoke app with npm start
 
+## Live Link
+https://evening-reef-48573-57db96f3f837.herokuapp.com/ 
 ## Installation
 
 1. Clone the repo
@@ -48,15 +50,18 @@ Culinary Canvas prioritizes security, implementing user authentication and secur
 
 
 ## Demo
-[![Watch the video](./images/video-start-image.png)](https://drive.google.com/file/d/1SA9a5PMkL4Dw93P33a_ZuZ4wFaElFn1M/view)
+[![Watch the video](./images/video-start-image.png)](https://drive.google.com/file/d/1oXZWv__qiFd_t_cBJBzhR48G5vDJiazo/view)
 
 
 ## Screenshots
-![Homepage](./images/c-tags.png)
-![Login/Signup](./images/c-tags.png)
-![Submit Recipe](./images/c-tags.png)
-![Single Recipe](./images/c-tags.png)
-![Logout](./images/c-tags.png)
+![Homepage](./public/assets/homepage.png)
+![Login/Signup](./public/assets/login:signup.png)
+![Signup Form](./public/assets/filledinsignup.png)
+![Submit Recipe](./public/assets/newrecipe.png)
+![Filled Recipe Form](./public/assets/filledoutrecipe.png)
+![Submitted Recipe](./public/assets/submittedrecipe.png)
+![Single Recipe](./public/assets/recipepage.png)
+![Logout](./public/assets/newhomepage.png)
 
 # Author
 Created with ♡ by Daelyn Hiduchick, Joey Raymond, and Sawyer Baldwin
