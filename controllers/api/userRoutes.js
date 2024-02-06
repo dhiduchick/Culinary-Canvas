@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const { jwtDecode } = require('jwt-decode');
 
 //This designates the path from creating a user
 router.post('/', async (req, res) => {
@@ -20,24 +21,31 @@ router.post('/', async (req, res) => {
 //this designates the route for loggin in
 router.post('/login', async (req, res) => {
     try {
-        const userData = await User.findOne({ where: { email: req.body.email } });
+        let decodedIdToken;
+
+        if (req.headers.id_token) {
+            decodedIdToken = jwtDecode(req.headers.id_token);
+        }
+        const userData = await User.findOne({ where: { email: decodedIdToken.email || req.body.email } });
 
         //If the username does not exist this functionality runs
-        if (!userData) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
-            return;
-        }
+        if (!decodedIdToken) {
+            if (!userData) {
+                res
+                    .status(400)
+                    .json({ message: 'Incorrect email or password, please try again' });
+                return;
+            }
 
-        const validPassword = await userData.checkPassword(req.body.password);
+            const validPassword = await userData.checkPassword(req.body.password);
 
-        //If the password is invalid this functionality runs
-        if (!validPassword) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect email or password, please try again' });
-            return;
+            //If the password is invalid this functionality runs
+            if (!validPassword) {
+                res
+                    .status(400)
+                    .json({ message: 'Incorrect email or password, please try again' });
+                return;
+            }
         }
         //Otherwise, this code runs
         req.session.save(() => {

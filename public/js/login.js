@@ -1,3 +1,22 @@
+const id_token = (new URL(document.location).searchParams).get('id_token');
+
+if (id_token) {
+  fetch('/api/users/login', {
+    headers: {
+      id_token
+    },
+    method: 'POST'
+  }).then(r => {
+    if (r.ok) {
+      // If successful, redirect the browser to the profile page
+      document.location.replace('/profile');
+    } else {
+      alert(response.statusText);
+    }
+  })
+  .catch(e => console.log(e))
+}
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
   

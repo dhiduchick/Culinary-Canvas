@@ -24,13 +24,12 @@
         "express": "^4.17.1",
         "express-handlebars": "^5.2.0",
         "express-session": "^1.17.1",
+        "google-auth-library": "^9.6.0",
         "handlebars": "^4.7.8",
+        "jwt-decode": "^4.0.0",
         "mkdirp": "^3.0.1",
         "mysql2": "^2.2.5",
-        "passport": "^0.7.0",
-        "passport-google-oidc": "^0.1.0",
-        "sequelize": "^6.3.5",
-        "sqlite3": "^5.1.7"
+        "sequelize": "^6.3.5"
     },
     "devDependencies": {
         "@types/express-handlebars": "^6.0.0",
